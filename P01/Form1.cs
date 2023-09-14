@@ -16,5 +16,19 @@ namespace P01
         {
             InitializeComponent();
         }
+        Form2 form2;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form2.textBox1.Text = label1.Text;
+            if (form2.ShowDialog() == DialogResult.OK)
+            {
+                label1.Text = form2.textBox1.Text;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            form2 = new Form2();
+        }
     }
 }
