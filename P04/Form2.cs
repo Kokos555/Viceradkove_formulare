@@ -16,5 +16,21 @@ namespace P04
         {
             InitializeComponent();
         }
+        Form3 form3;
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form3 = new Form3();
+            form3.Show();
+        }
     }
 }
