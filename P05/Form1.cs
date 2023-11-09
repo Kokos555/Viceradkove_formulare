@@ -34,6 +34,12 @@ namespace P05
             button2.Size = new Size(75, 23);
             button2.Text = "Cancel";
 
+            Button button3 = new Button();//založení instance tlačítka 
+            button3.DialogResult = DialogResult.Yes;
+            button3.Location = new Point(148, 188);
+            button3.Size = new Size(75, 23);
+            button3.Text = "Font";
+
             // textBox1
             TextBox textBox = new TextBox();//založení instance TextBoxu  
             textBox.Location = new Point(49, 40);
@@ -44,13 +50,14 @@ namespace P05
             Form form2 = new Form();   //založení instance formuláře
             form2.Location = new Point(0, 1000);
             form2.Controls.Add(textBox);//přidání komponenty na formulář
+            form2.Controls.Add(button3);
             form2.Controls.Add(button2);
             form2.Controls.Add(button1);
             form2.Text = "Nabidka";
 
             if (form2.ShowDialog() == DialogResult.OK)
             {
-                label1.Text = textBox.Text;
+
             }
 
         }

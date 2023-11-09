@@ -34,11 +34,18 @@ namespace P06
             button2.Size = new Size(75, 23);
             button2.Text = "Cancel";
 
+            // button3
+            Button button3 = new Button();
+            button3.DialogResult = DialogResult.Yes;
+            button3.Location = new Point(200,200);
+            button3.Size = new Size(75, 23);
+            button3.Text = "Font";
+
             // textBox1
             TextBox textBox = new TextBox();//založení instance TextBoxu  
             textBox.Location = new Point(49, 40);
             textBox.Size = new Size(188, 22);
-            textBox.Text = label1.Text;
+            //textBox.Text = label1.Text;
 
             // Nabidka
             Form form2 = new Form();   //založení instance formuláře
@@ -48,9 +55,14 @@ namespace P06
             form2.Controls.Add(button1);
             form2.Text = "Nabidka";
 
-            if (form2.ShowDialog() == DialogResult.OK)
+            FontDialog fontDialog = new FontDialog();
+            if (fontDialog.ShowDialog() == DialogResult.Yes)
+                button1.Font = fontDialog.Font;
+
+
+            if (form2.ShowDialog() == DialogResult.Yes)
             {
-                label1.Text = textBox.Text;
+                
             }
 
         }
