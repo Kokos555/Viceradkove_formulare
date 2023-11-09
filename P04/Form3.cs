@@ -21,18 +21,13 @@ namespace P04
 
         private void button1_Click(object sender, EventArgs e)
         {
-            form2.listBox1.Items.Clear();
+
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter("test.txt"))
-            {
-                for (int i = 0; i < form2.listBox1.Items.Count; i++)
-                {
-                    sw.WriteLine(form2.listBox1.Items[i].ToString());
-                }
-            }
+            
         }
     }
 }
