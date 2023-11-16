@@ -20,12 +20,13 @@ namespace P07
         Color backcolor = Form1.DefaultBackColor;
         private void button1_Click_1(object sender, EventArgs e)
         {
+            form2 = new Form();
             int vyska = ((int)numericUpDown2.Value);
             int sirka = ((int)numericUpDown1.Value);
 
             
 
-            form2 = new Form();
+            
             form2.Text = textBox1.Text;
             ColorDialog colorDialog = new ColorDialog();
             if (colorDialog.ShowDialog() == DialogResult.OK)
@@ -38,6 +39,12 @@ namespace P07
                 form2.MaximizeBox = false;
                 form2.FormBorderStyle = FormBorderStyle.FixedSingle;
             }
+
+            Button test = new Button();
+            test.Location = new Point(12, 12);
+            test.AutoSize = true;
+            test.Click += delegate;
+
 
             form2.BackColor = backcolor;
             form2.Show();
